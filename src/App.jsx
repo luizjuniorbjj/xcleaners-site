@@ -420,7 +420,8 @@ export default function XcleanersLanding() {
                 fontFamily: "'Inter', system-ui, sans-serif",
               }}>{item}</a>
             ))}
-            <a href="https://app.xcleaners.app" style={{
+            <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://app.xcleaners.app/register" style={{
               background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
               color: colors.white, padding: "10px 24px", borderRadius: 12,
               fontSize: 14, fontWeight: 600, textDecoration: "none",
@@ -463,7 +464,8 @@ export default function XcleanersLanding() {
                   fontFamily: "'Inter', system-ui, sans-serif",
                 }}>{item}</a>
             ))}
-            <a href="https://app.xcleaners.app" onClick={() => setMobileMenu(false)} style={{
+            <a href="https://app.xcleaners.app/login" onClick={() => setMobileMenu(false)} style={{ display: "block", textAlign: "center", marginTop: 12, color: colors.navy, padding: "14px 24px", borderRadius: 12, fontSize: 15, fontWeight: 600, textDecoration: "none", border: "1px solid " + colors.gray200, fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://app.xcleaners.app/register" onClick={() => setMobileMenu(false)} style={{
               display: "block", textAlign: "center", marginTop: 16,
               background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
               color: colors.white, padding: "14px 24px", borderRadius: 12,
@@ -552,7 +554,8 @@ export default function XcleanersLanding() {
 
             <Reveal delay={300}>
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 40 }}>
-                <a href="https://app.xcleaners.app" style={{
+                <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://app.xcleaners.app/register" style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
                   background: `linear-gradient(135deg, ${colors.navy}, ${colors.navyLight})`,
                   color: colors.white, padding: "16px 32px", borderRadius: 14,
@@ -565,7 +568,8 @@ export default function XcleanersLanding() {
                   </svg>
                   App Store
                 </a>
-                <a href="https://app.xcleaners.app" style={{
+                <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://app.xcleaners.app/register" style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
                   background: `linear-gradient(135deg, ${colors.green}, ${colors.greenLight})`,
                   color: colors.white, padding: "16px 32px", borderRadius: 14,
@@ -1073,7 +1077,8 @@ export default function XcleanersLanding() {
                       }}>{f}</span>
                     </div>
                   ))}
-                  <a href="https://app.xcleaners.app" style={{
+                  <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://app.xcleaners.app/register" style={{
                     display: "block", textAlign: "center", marginTop: 24,
                     background: plan.popular
                       ? `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`
