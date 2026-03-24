@@ -420,8 +420,8 @@ export default function XcleanersLanding() {
                 fontFamily: "'Inter', system-ui, sans-serif",
               }}>{item}</a>
             ))}
-            <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
-            <a href="https://app.xcleaners.app/register" style={{
+            <a href="https://cleanclaw-api-production.up.railway.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://cleanclaw-api-production.up.railway.app/register" style={{
               background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
               color: colors.white, padding: "10px 24px", borderRadius: 12,
               fontSize: 14, fontWeight: 600, textDecoration: "none",
@@ -464,8 +464,8 @@ export default function XcleanersLanding() {
                   fontFamily: "'Inter', system-ui, sans-serif",
                 }}>{item}</a>
             ))}
-            <a href="https://app.xcleaners.app/login" onClick={() => setMobileMenu(false)} style={{ display: "block", textAlign: "center", marginTop: 12, color: colors.navy, padding: "14px 24px", borderRadius: 12, fontSize: 15, fontWeight: 600, textDecoration: "none", border: "1px solid " + colors.gray200, fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
-            <a href="https://app.xcleaners.app/register" onClick={() => setMobileMenu(false)} style={{
+            <a href="https://cleanclaw-api-production.up.railway.app/login" onClick={() => setMobileMenu(false)} style={{ display: "block", textAlign: "center", marginTop: 12, color: colors.navy, padding: "14px 24px", borderRadius: 12, fontSize: 15, fontWeight: 600, textDecoration: "none", border: "1px solid " + colors.gray200, fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://cleanclaw-api-production.up.railway.app/register" onClick={() => setMobileMenu(false)} style={{
               display: "block", textAlign: "center", marginTop: 16,
               background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
               color: colors.white, padding: "14px 24px", borderRadius: 12,
@@ -1075,8 +1075,8 @@ export default function XcleanersLanding() {
                       }}>{f}</span>
                     </div>
                   ))}
-                  <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
-            <a href="https://app.xcleaners.app/register" style={{
+                  <a href="https://cleanclaw-api-production.up.railway.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://cleanclaw-api-production.up.railway.app/register" style={{
                     display: "block", textAlign: "center", marginTop: 24,
                     background: plan.popular
                       ? `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`
