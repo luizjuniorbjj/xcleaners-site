@@ -86,7 +86,7 @@ function Reveal({ children, delay = 0, className = "" }) {
 }
 
 // ─── Logo Component ───────────────────────────────────────────
-function Logo({ height = 44 }) {
+function Logo({ height = 48 }) {
   return (
     <img
       src="/logo.png"
@@ -407,7 +407,7 @@ export default function XcleanersLanding() {
           ...sectionStyle,
           display: "flex", justifyContent: "space-between", alignItems: "center",
         }}>
-          <Logo height={44} />
+          <Logo height={48} />
 
           {/* Desktop nav */}
           <div style={{
@@ -554,30 +554,24 @@ export default function XcleanersLanding() {
 
             <Reveal delay={300}>
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 40 }}>
-                <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
-            <a href="https://app.xcleaners.app/register" style={{
+                <a href="#" style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
-                  background: `linear-gradient(135deg, ${colors.navy}, ${colors.navyLight})`,
-                  color: colors.white, padding: "16px 32px", borderRadius: 14,
-                  fontSize: 16, fontWeight: 600, textDecoration: "none",
-                  boxShadow: `0 8px 32px ${colors.navy}40`,
+                  background: colors.navy,
+                  color: colors.white, padding: "12px 24px", borderRadius: 12,
+                  fontSize: 15, fontWeight: 600, textDecoration: "none",
                   transition: "all 0.3s ease",
                 }}>
-                  <svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor">
-                    <path d="M14.94 5.19A4.38 4.38 0 0 0 12 4a4.94 4.94 0 0 0-3.84 2.48A4.92 4.92 0 0 0 4.38 4.8a4.31 4.31 0 0 0-2.56 1.33A6.24 6.24 0 0 0 .1 10.68c0 3.66 3.14 7.98 6.38 10.58a3.1 3.1 0 0 0 2 .74 3.1 3.1 0 0 0 2-.74c3.24-2.6 6.38-6.92 6.38-10.58a6.24 6.24 0 0 0-1.72-4.55l-.2-.94z"/>
-                  </svg>
+                  <svg width="20" height="24" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
                   App Store
                 </a>
-                <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
-            <a href="https://app.xcleaners.app/register" style={{
+                <a href="#" style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
-                  background: `linear-gradient(135deg, ${colors.green}, ${colors.greenLight})`,
-                  color: colors.white, padding: "16px 32px", borderRadius: 14,
-                  fontSize: 16, fontWeight: 600, textDecoration: "none",
-                  boxShadow: `0 8px 32px ${colors.green}40`,
+                  background: colors.navy,
+                  color: colors.white, padding: "12px 24px", borderRadius: 12,
+                  fontSize: 15, fontWeight: 600, textDecoration: "none",
                   transition: "all 0.3s ease",
                 }}>
-                  <Play size={20} fill="white" />
+                  <svg width="20" height="22" viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
                   Google Play
                 </a>
               </div>
@@ -1189,9 +1183,7 @@ export default function XcleanersLanding() {
                 transition: "all 0.3s ease",
                 fontFamily: "'Inter', system-ui, sans-serif",
               }}>
-                <svg width="22" height="26" viewBox="0 0 24 28" fill="none">
-                  <path d="M19.7 24.4c-1.2 1.4-2.5 1.2-3.8.5-1.3-.7-2.5-.7-3.9 0-1.8 1-2.7.7-3.8-.5C3.4 19.2 4.1 11.3 9.5 11c1.5.1 2.6 1 3.4 1 .8 0 2.3-1.2 3.9-1 .7 0 2.5.3 3.6 2-3.3 2-2.5 6.3.4 7.7-.6 1.5-1.4 3-2.1 3.7zM15.5 7.5c-1.7.1-3.2-1.2-3-3 1.6-.2 3.3 1.1 3 3z" fill={colors.navy}/>
-                </svg>
+                <svg width="20" height="24" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
                 Download for iOS
               </a>
               <a href="#" style={{
@@ -1204,7 +1196,7 @@ export default function XcleanersLanding() {
                 transition: "all 0.3s ease",
                 fontFamily: "'Inter', system-ui, sans-serif",
               }}>
-                <Play size={20} fill="white" />
+                <svg width="20" height="22" viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
                 Download for Android
               </a>
             </div>
@@ -1242,7 +1234,7 @@ export default function XcleanersLanding() {
           }}>
             <div>
               <div style={{ marginBottom: 16 }}>
-                <img src="/logo.png" alt="Xcleaners" style={{ height: 42, width: "auto", filter: "brightness(0) invert(1)" }} />
+                <img src="/logo.png" alt="Xcleaners" style={{ height: 44, width: "auto", filter: "brightness(0) invert(1)" }} />
               </div>
               <p style={{
                 fontSize: 14, color: colors.gray400, lineHeight: 1.65, maxWidth: 280,
