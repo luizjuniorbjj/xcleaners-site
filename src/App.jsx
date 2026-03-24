@@ -407,11 +407,11 @@ export default function XcleanersLanding() {
           ...sectionStyle,
           display: "flex", justifyContent: "space-between", alignItems: "center",
         }}>
-          <Logo height={48} />
+          <Logo height={56} />
 
           {/* Desktop nav */}
           <div style={{
-            display: "flex", gap: 36, alignItems: "center",
+            display: "flex", gap: 32, alignItems: "center",
           }} className="desktop-nav">
             {["Features", "How It Works", "Testimonials", "Pricing"].map((item) => (
               <a key={item} href={`#${item.toLowerCase().replace(/\s/g, "-")}`} style={{
@@ -420,7 +420,7 @@ export default function XcleanersLanding() {
                 fontFamily: "'Inter', system-ui, sans-serif",
               }}>{item}</a>
             ))}
-            <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
+            <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", border: `1px solid ${colors.gray200}`, borderRadius: 10, padding: "8px 18px", }}>Log In</a>
             <a href="https://app.xcleaners.app/register" style={{
               background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
               color: colors.white, padding: "10px 24px", borderRadius: 12,
@@ -536,7 +536,7 @@ export default function XcleanersLanding() {
             </Reveal>
 
             <Reveal delay={50}>
-              <img src="/logo.png" alt="Xcleaners" style={{ height: 80, width: "auto", marginBottom: 28 }} />
+              <img src="/logo.png" alt="Xcleaners" style={{ height: 100, width: "auto", marginBottom: 28 }} />
             </Reveal>
 
             <Reveal delay={150}>
@@ -1238,7 +1238,7 @@ export default function XcleanersLanding() {
           }}>
             <div>
               <div style={{ marginBottom: 16 }}>
-                <img src="/logo.png" alt="Xcleaners" style={{ height: 44, width: "auto", filter: "brightness(0) invert(1)" }} />
+                <img src="/logo.png" alt="Xcleaners" style={{ height: 48, width: "auto", filter: "brightness(0) invert(1)" }} />
               </div>
               <p style={{
                 fontSize: 14, color: colors.gray400, lineHeight: 1.65, maxWidth: 280,
