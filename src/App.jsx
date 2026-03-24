@@ -86,7 +86,7 @@ function Reveal({ children, delay = 0, className = "" }) {
 }
 
 // ─── Logo Component ───────────────────────────────────────────
-function Logo({ height = 36 }) {
+function Logo({ height = 44 }) {
   return (
     <img
       src="/logo.png"
@@ -407,7 +407,7 @@ export default function XcleanersLanding() {
           ...sectionStyle,
           display: "flex", justifyContent: "space-between", alignItems: "center",
         }}>
-          <Logo height={34} />
+          <Logo height={44} />
 
           {/* Desktop nav */}
           <div style={{
@@ -1237,7 +1237,7 @@ export default function XcleanersLanding() {
           }}>
             <div>
               <div style={{ marginBottom: 16 }}>
-                <img src="/logo.png" alt="Xcleaners" style={{ height: 36, width: "auto", filter: "brightness(0) invert(1)" }} />
+                <img src="/logo.png" alt="Xcleaners" style={{ height: 42, width: "auto", filter: "brightness(0) invert(1)" }} />
               </div>
               <p style={{
                 fontSize: 14, color: colors.gray400, lineHeight: 1.65, maxWidth: 280,
