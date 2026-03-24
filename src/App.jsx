@@ -86,7 +86,7 @@ function Reveal({ children, delay = 0, className = "" }) {
 }
 
 // ─── Logo Component ───────────────────────────────────────────
-function Logo({ height = 48 }) {
+function Logo({ height = 56 }) {
   return (
     <img
       src="/logo.png"
@@ -535,7 +535,11 @@ export default function XcleanersLanding() {
               </div>
             </Reveal>
 
-            <Reveal delay={100}>
+            <Reveal delay={50}>
+              <img src="/logo.png" alt="Xcleaners" style={{ height: 80, width: "auto", marginBottom: 28 }} />
+            </Reveal>
+
+            <Reveal delay={150}>
               <h1 style={{ ...headingStyle, fontSize: "clamp(36px, 5vw, 56px)", marginBottom: 24 }}>
                 Run your cleaning business on
                 <span style={{
