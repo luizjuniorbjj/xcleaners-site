@@ -25,6 +25,9 @@ const colors = {
   gray800: "#2D3A48",
 };
 
+// Numerals use a mono face for typographic texture (brandbook: Inter + JetBrains Mono).
+const MONO = "'JetBrains Mono', ui-monospace, 'SF Mono', monospace";
+
 // ─── Animated Counter ─────────────────────────────────────────
 function AnimatedCounter({ end, suffix = "", prefix = "", duration = 2000 }) {
   const [count, setCount] = useState(0);
@@ -76,8 +79,8 @@ function Reveal({ children, delay = 0, className = "" }) {
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(32px)",
-        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
+        transform: visible ? "translateY(0)" : "translateY(24px)",
+        transition: `opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1) ${delay}ms, transform 0.6s cubic-bezier(0.33, 1, 0.68, 1) ${delay}ms`,
       }}
     >
       {children}
@@ -429,7 +432,7 @@ export default function XcleanersLanding() {
               transition: "all 0.3s ease",
               fontFamily: "'Inter', system-ui, sans-serif",
             }}>
-              Download Free
+              Start Free Trial
             </a>
           </div>
 
@@ -472,7 +475,7 @@ export default function XcleanersLanding() {
               fontSize: 15, fontWeight: 600, textDecoration: "none",
               fontFamily: "'Inter', system-ui, sans-serif",
             }}>
-              Download Free
+              Start Free Trial
             </a>
           </div>
         )}
@@ -530,7 +533,7 @@ export default function XcleanersLanding() {
                   <Sparkles size={12} color={colors.white} />
                 </div>
                 <span style={{ fontSize: 13, fontWeight: 600, color: colors.navy }}>
-                  Trusted by 5,000+ cleaning businesses
+                  Trusted by <span style={{ fontFamily: MONO, fontWeight: 600 }}>800+</span> cleaning businesses
                 </span>
               </div>
             </Reveal>
@@ -584,9 +587,9 @@ export default function XcleanersLanding() {
             <Reveal delay={400}>
               <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
                 {[
-                  { icon: CheckCircle2, text: "Free for 14 days" },
-                  { icon: CheckCircle2, text: "No credit card required" },
+                  { icon: CheckCircle2, text: "14-day free trial" },
                   { icon: CheckCircle2, text: "Set up in 5 minutes" },
+                  { icon: CheckCircle2, text: "Cancel anytime" },
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                     <item.icon size={16} color={colors.green} />
@@ -618,14 +621,11 @@ export default function XcleanersLanding() {
               flexWrap: "wrap", alignItems: "center",
             }}>
               {[
-                { value: 5000, suffix: "+", label: "Active businesses" },
-                { value: 2, prefix: "", suffix: "M+", label: "Bookings per month" },
-                { value: 98, suffix: "%", label: "Satisfaction rate" },
-                { value: 20, suffix: "h", label: "Saved per week" },
+                { value: 800, suffix: "+", label: "Active businesses" },
               ].map((stat, i) => (
                 <div key={i} style={{ textAlign: "center" }}>
                   <p style={{
-                    ...headingStyle, fontSize: 36, margin: 0,
+                    ...headingStyle, fontSize: 44, margin: 0, fontFamily: MONO, letterSpacing: "-0.02em",
                     background: `linear-gradient(135deg, ${colors.blue}, ${colors.green})`,
                     WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
                   }}>
@@ -634,6 +634,95 @@ export default function XcleanersLanding() {
                   <p style={{ fontSize: 14, color: colors.gray400, margin: "4px 0 0" }}>{stat.label}</p>
                 </div>
               ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── AI ASSISTANT ─────────────────────────────────── */}
+      <section style={{ padding: "100px 0", background: colors.white }}>
+        <div style={{
+          ...sectionStyle,
+          display: "flex", alignItems: "center", gap: 56, flexWrap: "wrap",
+        }}>
+          <div style={{ flex: "1 1 440px", minWidth: 0 }}>
+            <Reveal>
+              <p style={{
+                fontSize: 13, fontWeight: 700, color: colors.blue,
+                textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 12,
+              }}>Your AI assistant</p>
+              <h2 style={{ ...headingStyle, fontSize: "clamp(28px, 4vw, 42px)", marginBottom: 16 }}>
+                Just tell it what to do
+              </h2>
+              <p style={{ ...bodyStyle, fontSize: 17, maxWidth: 520, marginBottom: 24 }}>
+                Book, reschedule, or cancel a job by simply chatting — by text or in the app. Your
+                assistant pulls up the right client and booking, shows you a summary, and only acts
+                after you confirm. No forms, no digging through screens.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {[
+                  "Understands plain requests like \"move the Johnson clean to Friday 2pm\"",
+                  "Always shows a summary and waits for your confirmation before changing anything",
+                  "Sends the client and your team the right notifications automatically",
+                ].map((t, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
+                    <CheckCircle2 size={18} color={colors.green} style={{ flexShrink: 0, marginTop: 2 }} />
+                    <span style={{ fontSize: 15, color: colors.gray800, fontFamily: "'Inter', system-ui, sans-serif" }}>{t}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={150} className="">
+            <div style={{
+              flex: "1 1 340px", maxWidth: 420,
+              background: colors.gray50, borderRadius: 24, padding: "28px 24px",
+              border: `1px solid ${colors.gray100}`,
+              boxShadow: "0 12px 48px rgba(11,29,53,0.08)",
+              display: "flex", flexDirection: "column", gap: 14,
+            }}>
+              <div style={{
+                alignSelf: "flex-end", maxWidth: "85%",
+                background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
+                color: colors.white, padding: "12px 16px",
+                borderRadius: "16px 16px 4px 16px", fontSize: 14, lineHeight: 1.5,
+                fontFamily: "'Inter', system-ui, sans-serif",
+              }}>
+                Cancel tomorrow's 10am clean for Sarah Johnson
+              </div>
+              <div style={{
+                alignSelf: "flex-start", maxWidth: "90%",
+                background: colors.white, color: colors.gray800,
+                padding: "14px 16px", borderRadius: "16px 16px 16px 4px",
+                fontSize: 14, lineHeight: 1.5, border: `1px solid ${colors.gray100}`,
+                boxShadow: "0 2px 8px rgba(11,29,53,0.04)",
+                fontFamily: "'Inter', system-ui, sans-serif",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                  <div style={{
+                    width: 24, height: 24, borderRadius: "50%",
+                    background: `linear-gradient(135deg, ${colors.green}, ${colors.greenLight})`,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                  }}>
+                    <Sparkles size={12} color={colors.white} />
+                  </div>
+                  <span style={{ fontWeight: 600, color: colors.navy }}>Assistant</span>
+                </div>
+                Found it — <strong>Deep Clean</strong> for Sarah Johnson, <span style={{ fontFamily: MONO }}>tomorrow 10:00</span>. Cancel this booking and notify the client?
+              </div>
+              <div style={{ alignSelf: "flex-end", display: "flex", gap: 8 }}>
+                <span style={{
+                  background: colors.green, color: colors.white, padding: "8px 18px",
+                  borderRadius: 100, fontSize: 13, fontWeight: 600,
+                  fontFamily: "'Inter', system-ui, sans-serif",
+                }}>Yes, cancel</span>
+                <span style={{
+                  background: colors.white, color: colors.gray600, padding: "8px 18px",
+                  borderRadius: 100, fontSize: 13, fontWeight: 600, border: `1px solid ${colors.gray200}`,
+                  fontFamily: "'Inter', system-ui, sans-serif",
+                }}>Keep it</span>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -678,7 +767,7 @@ export default function XcleanersLanding() {
               {
                 icon: CreditCard,
                 title: "Billing & Payments",
-                desc: "Invoice automatically and get paid by card, ACH, or digital wallet right through the app.",
+                desc: "Invoice automatically and get paid by card right in the app.",
                 accent: colors.blue,
               },
               {
@@ -689,8 +778,8 @@ export default function XcleanersLanding() {
               },
               {
                 icon: MapPin,
-                title: "Optimized Routes",
-                desc: "Organize jobs by location to save your team time and gas money.",
+                title: "Routes by Location",
+                desc: "Organize jobs by location so your team drives less.",
                 accent: colors.blue,
               },
               {
@@ -848,7 +937,7 @@ export default function XcleanersLanding() {
               {
                 icon: Zap,
                 title: "Automation that works",
-                desc: "Save 20+ hours per week with automated communications, billing, and reports.",
+                desc: "Cut hours of manual texting, scheduling, and invoicing every week with automated communications, billing, and reports.",
               },
               {
                 icon: Shield,
@@ -857,8 +946,8 @@ export default function XcleanersLanding() {
               },
               {
                 icon: TrendingUp,
-                title: "Proven results",
-                desc: "Our clients grow an average of 35% in their first year using Xcleaners.",
+                title: "Built for growth",
+                desc: "Add team members and locations as you grow — without losing control of the day-to-day.",
               },
               {
                 icon: Smartphone,
@@ -905,7 +994,7 @@ export default function XcleanersLanding() {
                 textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 12,
               }}>Testimonials</p>
               <h2 style={{ ...headingStyle, fontSize: "clamp(28px, 4vw, 42px)", marginBottom: 16 }}>
-                Over 5,000 businesses trust Xcleaners
+                Join <span style={{ fontFamily: MONO }}>800+</span> cleaning businesses
               </h2>
             </div>
           </Reveal>
@@ -965,7 +1054,7 @@ export default function XcleanersLanding() {
           </Reveal>
 
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap", justifyContent: "center" }}>
-            <Reveal delay={0}><StepCard number="1" title="Download the app" desc="Available free on the App Store and Google Play. Create your account in under 2 minutes." /></Reveal>
+            <Reveal delay={0}><StepCard number="1" title="Download the app" desc="Available on the App Store and Google Play. Create your account in under 2 minutes." /></Reveal>
             <Reveal delay={150}><StepCard number="2" title="Set up your business" desc="Import your clients and services. Our team helps you for free during this step." /></Reveal>
             <Reveal delay={300}><StepCard number="3" title="Let Xcleaners do the work" desc="Scheduling, billing, and communications on autopilot. Focus on growing your business." /></Reveal>
           </div>
@@ -984,7 +1073,7 @@ export default function XcleanersLanding() {
                 Plans that fit your budget
               </h2>
               <p style={{ ...bodyStyle, fontSize: 17 }}>
-                Start free. No credit card. No surprises.
+                14-day free trial on every plan. Cancel anytime.
               </p>
             </div>
           </Reveal>
@@ -996,12 +1085,12 @@ export default function XcleanersLanding() {
           }}>
             {[
               {
-                name: "Starter",
-                price: "Free",
-                period: "forever",
+                name: "Basic",
+                price: "$29",
+                period: "/month",
                 desc: "Perfect for getting started",
-                features: ["Up to 30 bookings/month", "1 team member", "Visual calendar", "Email notifications", "Email support"],
-                cta: "Start Free",
+                features: ["Up to 30 bookings/month", "1 team member", "Visual calendar", "Email + SMS reminders", "Email support"],
+                cta: "Try Free for 14 Days",
                 accent: colors.gray600,
                 bg: colors.white,
               },
@@ -1017,12 +1106,12 @@ export default function XcleanersLanding() {
                 popular: true,
               },
               {
-                name: "Enterprise",
+                name: "Maximum",
                 price: "$99",
                 period: "/month",
                 desc: "For large-scale operations",
-                features: ["Everything in Professional", "Unlimited team members", "API integrations", "Dedicated account manager", "Custom reports", "VIP onboarding"],
-                cta: "Talk to Sales",
+                features: ["Everything in Professional", "Unlimited team members", "Dedicated account manager", "Custom reports", "VIP onboarding"],
+                cta: "Try Free for 14 Days",
                 accent: colors.green,
                 bg: colors.white,
               },
@@ -1039,7 +1128,7 @@ export default function XcleanersLanding() {
                     ? `2px solid ${colors.blue}`
                     : `1px solid ${colors.gray200}`,
                   position: "relative",
-                  transform: "none",
+                  transform: plan.popular ? "translateY(-12px)" : "none",
                 }}>
                   {plan.popular && (
                     <div style={{
@@ -1047,7 +1136,7 @@ export default function XcleanersLanding() {
                       background: `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`,
                       color: colors.white, padding: "4px 16px", borderRadius: 100,
                       fontSize: 12, fontWeight: 700,
-                    }}>Most Popular</div>
+                    }}>Recommended</div>
                   )}
                   <h3 style={{
                     fontSize: 18, fontWeight: 700, color: plan.accent,
@@ -1055,10 +1144,10 @@ export default function XcleanersLanding() {
                   }}>{plan.name}</h3>
                   <div style={{ marginBottom: 8 }}>
                     <span style={{
-                      fontSize: 40, fontWeight: 800, color: colors.navy,
-                      fontFamily: "'Inter', system-ui, sans-serif",
+                      fontSize: 40, fontWeight: 700, color: colors.navy,
+                      fontFamily: MONO, letterSpacing: "-0.02em",
                     }}>{plan.price}</span>
-                    <span style={{ fontSize: 15, color: colors.gray400 }}>{plan.period}</span>
+                    <span style={{ fontSize: 15, color: colors.gray400, fontFamily: MONO }}>{plan.period}</span>
                   </div>
                   <p style={{
                     fontSize: 14, color: colors.gray600, marginBottom: 24,
@@ -1075,8 +1164,7 @@ export default function XcleanersLanding() {
                       }}>{f}</span>
                     </div>
                   ))}
-                  <a href="https://app.xcleaners.app/login" style={{ fontSize: 14, fontWeight: 600, color: colors.navy, textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", }}>Log In</a>
-            <a href="https://app.xcleaners.app/register" style={{
+                  <a href="https://app.xcleaners.app/register" style={{
                     display: "block", textAlign: "center", marginTop: 24,
                     background: plan.popular
                       ? `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`
@@ -1111,7 +1199,7 @@ export default function XcleanersLanding() {
             <div>
               <FAQItem
                 question="Is the trial really free?"
-                answer="Yes! You get 14 full days with access to every feature, no credit card required. No catches."
+                answer="You get 14 full days with every feature. We ask for a card so service isn't interrupted when the trial ends — cancel anytime before day 14 and you won't be charged."
               />
               <FAQItem
                 question="Do I need any technical skills?"
@@ -1127,7 +1215,7 @@ export default function XcleanersLanding() {
               />
               <FAQItem
                 question="Does Xcleaners work for small businesses?"
-                answer="Absolutely! We have a free-forever plan that's perfect for getting started. You grow, Xcleaners grows with you."
+                answer="Yes. Solo operators start on Basic and add team members and locations as they grow."
               />
               <FAQItem
                 question="Is my data secure?"
@@ -1170,7 +1258,7 @@ export default function XcleanersLanding() {
               ...bodyStyle, fontSize: 18, color: colors.gray400,
               maxWidth: 520, margin: "0 auto 40px",
             }}>
-              Join 5,000+ businesses that already transformed their operations with Xcleaners.
+              Join <span style={{ fontFamily: MONO, color: colors.white }}>800+</span> businesses already running on Xcleaners.
             </p>
           </Reveal>
           <Reveal delay={200}>
@@ -1211,8 +1299,8 @@ export default function XcleanersLanding() {
             }}>
               {[
                 "14-day free trial",
-                "No credit card needed",
                 "Cancel anytime",
+                "Set up in 5 minutes",
               ].map((text, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                   <CheckCircle2 size={16} color={colors.greenLight} />

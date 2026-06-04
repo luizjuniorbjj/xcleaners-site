@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <title>Xcleaners — Run Your Cleaning Business on Autopilot</title>
-    <meta name="description" content="Schedule, communicate, and collect payments automatically. The #1 app for cleaning business owners. Try free for 14 days." />
+    <meta name="description" content="The all-in-one app to schedule, message clients, and get paid — built for cleaning businesses. Try free for 14 days." />
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -14,7 +15,7 @@
 
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
     <meta property="og:title" content="Xcleaners — Run Your Cleaning Business on Autopilot" />
-    <meta property="og:description" content="Schedule, communicate, and collect payments automatically. The #1 app for cleaning business owners." />
+    <meta property="og:description" content="The all-in-one app to schedule, message clients, and get paid — built for cleaning businesses. Try free for 14 days." />
     <meta property="og:image" content="https://xcleaners.app/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -25,17 +26,66 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Xcleaners — Run Your Cleaning Business on Autopilot" />
-    <meta name="twitter:description" content="Schedule, communicate, and collect payments automatically. The #1 app for cleaning business owners." />
+    <meta name="twitter:description" content="The all-in-one app to schedule, message clients, and get paid — built for cleaning businesses. Try free for 14 days." />
     <meta name="twitter:image" content="https://xcleaners.app/og-image.png" />
 
     <!-- Theme -->
     <meta name="theme-color" content="#0B1D35" />
     <meta name="msapplication-TileColor" content="#0B1D35" />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://xcleaners.app/" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Xcleaners",
+      "url": "https://xcleaners.app/",
+      "logo": "https://xcleaners.app/favicon-192.png",
+      "description": "Software to schedule jobs, message clients, and get paid — built for cleaning businesses.",
+      "founder": {
+        "@type": "Organization",
+        "name": "LPJ Services LLC"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Xcleaners",
+      "description": "The all-in-one app to schedule, message clients, and get paid — built for cleaning businesses.",
+      "url": "https://xcleaners.app/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": [
+        { "@type": "Offer", "name": "Basic", "price": "29", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Professional", "price": "49", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Maximum", "price": "99", "priceCurrency": "USD" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is the trial really free?", "acceptedAnswer": { "@type": "Answer", "text": "You get 14 full days with every feature. We ask for a card so service isn't interrupted when the trial ends — cancel anytime before day 14 and you won't be charged." } },
+        { "@type": "Question", "name": "Do I need any technical skills?", "acceptedAnswer": { "@type": "Answer", "text": "Not at all. If you can use your phone, you can use Xcleaners. Plus our team sets everything up with you for free." } },
+        { "@type": "Question", "name": "Can I cancel anytime?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. No contracts, no penalties, no red tape. Month to month, total freedom." } },
+        { "@type": "Question", "name": "How do I import my existing clients?", "acceptedAnswer": { "@type": "Answer", "text": "Send us your client list by spreadsheet, photo of your notebook, or any format. Our team imports everything for you at no extra cost." } },
+        { "@type": "Question", "name": "Does Xcleaners work for small businesses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Solo operators start on Basic and add team members and locations as they grow." } },
+        { "@type": "Question", "name": "Is my data secure?", "acceptedAnswer": { "@type": "Answer", "text": "We use bank-level encryption and secure servers. Your data and your clients' data are fully protected." } }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
