@@ -588,7 +588,7 @@ export default function XcleanersLanding() {
               <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
                 {[
                   { icon: CheckCircle2, text: "14-day free trial" },
-                  { icon: CheckCircle2, text: "Set up in 5 minutes" },
+                  { icon: CheckCircle2, text: "No credit card" },
                   { icon: CheckCircle2, text: "Cancel anytime" },
                 ].map((item, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -1073,7 +1073,7 @@ export default function XcleanersLanding() {
                 Plans that fit your budget
               </h2>
               <p style={{ ...bodyStyle, fontSize: 17 }}>
-                14-day free trial on every plan. Cancel anytime.
+                14-day free trial on Starter &amp; Pro — no credit card. Cancel anytime.
               </p>
             </div>
           </Reveal>
@@ -1085,33 +1085,36 @@ export default function XcleanersLanding() {
           }}>
             {[
               {
-                name: "Basic",
-                price: "$29",
+                name: "Starter",
+                price: "$49",
                 period: "/month",
-                desc: "Perfect for getting started",
-                features: ["Up to 30 bookings/month", "1 team member", "Visual calendar", "Email + SMS reminders", "Email support"],
+                desc: "For getting started",
+                features: ["Up to 3 cleaners", "1 team", "AI owner assistant (chat)", "Online booking + client CRM", "500 SMS/month", "Email support"],
                 cta: "Try Free for 14 Days",
+                href: "https://app.xcleaners.app/register",
                 accent: colors.gray600,
                 bg: colors.white,
               },
               {
-                name: "Professional",
-                price: "$49",
+                name: "Pro",
+                price: "$99",
                 period: "/month",
                 desc: "For growing businesses",
-                features: ["Unlimited bookings", "Up to 10 team members", "Automated SMS + Email", "Auto-billing", "Advanced reports", "Priority support"],
+                features: ["Unlimited cleaners & teams", "AI owner assistant (chat)", "Online booking + client CRM", "2,000 SMS/month", "Multi-location + advanced reports", "Priority support"],
                 cta: "Try Free for 14 Days",
+                href: "https://app.xcleaners.app/register",
                 accent: colors.blue,
                 bg: colors.white,
                 popular: true,
               },
               {
-                name: "Maximum",
-                price: "$99",
-                period: "/month",
-                desc: "For large-scale operations",
-                features: ["Everything in Professional", "Unlimited team members", "Dedicated account manager", "Custom reports", "VIP onboarding"],
-                cta: "Try Free for 14 Days",
+                name: "White Label",
+                price: "$199",
+                period: "/mo",
+                desc: "Done-for-you · $999 one-time setup",
+                features: ["Everything in Pro", "Your brand, logo & domain", "Complete branded website", "AI assistant under your brand", "Assisted onboarding & migration"],
+                cta: "Contact Us",
+                href: "#",
                 accent: colors.green,
                 bg: colors.white,
               },
@@ -1164,7 +1167,7 @@ export default function XcleanersLanding() {
                       }}>{f}</span>
                     </div>
                   ))}
-                  <a href="https://app.xcleaners.app/register" style={{
+                  <a href={plan.href} style={{
                     display: "block", textAlign: "center", marginTop: 24,
                     background: plan.popular
                       ? `linear-gradient(135deg, ${colors.blue}, ${colors.blueLight})`
@@ -1199,7 +1202,7 @@ export default function XcleanersLanding() {
             <div>
               <FAQItem
                 question="Is the trial really free?"
-                answer="You get 14 full days with every feature. We ask for a card so service isn't interrupted when the trial ends — cancel anytime before day 14 and you won't be charged."
+                answer="Yes — 14 full days with every feature, no credit card required. We only ask for a card when you decide to subscribe."
               />
               <FAQItem
                 question="Do I need any technical skills?"
@@ -1215,7 +1218,7 @@ export default function XcleanersLanding() {
               />
               <FAQItem
                 question="Does Xcleaners work for small businesses?"
-                answer="Yes. Solo operators start on Basic and add team members and locations as they grow."
+                answer="Yes. Solo operators start on Starter and add team members and locations as they grow."
               />
               <FAQItem
                 question="Is my data secure?"
@@ -1299,8 +1302,8 @@ export default function XcleanersLanding() {
             }}>
               {[
                 "14-day free trial",
+                "No credit card",
                 "Cancel anytime",
-                "Set up in 5 minutes",
               ].map((text, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                   <CheckCircle2 size={16} color={colors.greenLight} />
